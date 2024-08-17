@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: digital-education-exam
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:user_db;DATABASE_TO_UPPER=false
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+  flyway:
+    enabled: true
+  mvc:
+    servlet:
+      path: /user-api
